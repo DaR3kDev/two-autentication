@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('docker-hub') 
+        DOCKERHUB_CREDENTIALS = credentials('docker-hub')
         IMAGE_NAME = "dark093/two-autentication"
         BUILD_VERSION = "1.0.${env.BUILD_ID}"
     }
@@ -20,7 +20,7 @@ pipeline {
                 script {
                     echo "🏗️ Construyendo imagen Docker..."
                     sh """
-                        docker build -f Dockerfile.node \
+                        docker build -f Dockerfile.python \
                         --build-arg BUILD_VERSION=${BUILD_VERSION} \
                         -t ${IMAGE_NAME}:${BUILD_VERSION} .
                     """
