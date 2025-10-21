@@ -1,0 +1,2 @@
+# test with selenium
+selenium~=4.30.0

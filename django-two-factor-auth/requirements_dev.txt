@@ -1,0 +1,19 @@
+# The app itself
+
+-e .[call,sms,webauthn,yubikey,phonenumberslite,tests,linting]
+
+# Example app
+
+django-debug-toolbar
+django-bootstrap-form
+django-user-sessions
+
+# Documentation
+
+Sphinx
+sphinx_rtd_theme
+
+# Build
+
+wheel
+twine
