@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('docker-hub') 
-        IMAGE_NAME = "dark093/parcial2"
+        IMAGE_NAME = "dark093/two-autentication"
         BUILD_VERSION = "1.0.${env.BUILD_ID}"
     }
 
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo "🔄 Clonando repositorio..."
-                git branch: 'main', url: 'https://github.com/DaR3kDev/parcial2.git'
+                git branch: 'main', url: 'https://github.com/DaR3kDev/two-autentication.git'
             }
         }
 
